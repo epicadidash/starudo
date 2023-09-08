@@ -3,10 +3,10 @@
 </script>
 
 <div class="todo-container">
-    <Todolistitem  name='hello'/>
+    <Todolistitem id="1"  name='hello'/>
   </div>
   <div class="todo-container">
-    <Todolistitem  name='hello'/>
+    <Todolistitem id="2" name='hell'/>
   </div>
   <style>
     @import './todo.css';

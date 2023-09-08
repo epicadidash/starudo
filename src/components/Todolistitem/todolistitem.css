@@ -1,0 +1,12 @@
+input[type="radio"] {
+    display: none; /* Hide the default radio button */
+}
+
+input[type="radio"] + label:before {
+    content: "\2610"; /* Unicode for an empty checkbox */
+    margin-right: 10px;
+}
+
+input[type="radio"]:checked + label:before {
+    content: "\2611"; /* Unicode for a checked checkbox */
+}
