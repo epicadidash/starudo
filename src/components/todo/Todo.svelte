@@ -1,14 +1,20 @@
 <script lang="ts">
-  import Todolistitem from "../Todolistitem/Todolistitem.svelte";
-</script>
 
-<div class="todo-container">
-    <Todolistitem id="1"  name='hello'/>
+</script>
+<div class="todocontainer">
+  <div class="round">
+    <input type="checkbox" id="checkbox" />
+    <label for="checkbox"></label>
   </div>
-  <div class="todo-container">
-    <Todolistitem id="2" name='hell'/>
+<span>Hello </span>
+</div>
+<div class="todocontainer">
+  <div class="round">
+    <input type="checkbox" id="star" />
+    <label for="star"></label>
   </div>
-  <style>
-    @import './todo.css';
+<span>Hello </span>
+</div>
+<style>
+  @import "./todo.css";
 </style>
-  
