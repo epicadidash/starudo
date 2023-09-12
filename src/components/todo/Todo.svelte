@@ -27,6 +27,9 @@ function oncompletion(event:Event){
     <label on:click|capture={oncompletion } for={id?.toString()}></label>
   </div>
 <span class={strike ? 'strikethrough' : ''}>{title}</span>
+<div>
+  <s> <span> {title}</span></s>
+</div>
 </div>
 <style>
   @import "./todo.css";
