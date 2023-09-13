@@ -1,6 +1,13 @@
-
-.strikethrough {
-  text-decoration: line-through;
+.invisible{
+  display: none;
+}
+.strike{
+  color: rgb(153, 151, 151);
+  user-select: none;
+}
+.span{
+  font-weight: bolder;
+  user-select: none;
 }
   .todocontainer {
   width: 70vw;

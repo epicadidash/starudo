@@ -26,9 +26,9 @@ function oncompletion(event:Event){
     <input type="checkbox" id={id?.toString()} />
     <label on:click|capture={oncompletion } for={id?.toString()}></label>
   </div>
-<span class={strike ? 'strikethrough' : ''}>{title}</span>
-<div>
-  <s> <span> {title}</span></s>
+<span class="span {strike ? 'invisible' : ''}">{title}</span>
+<div class={strike ? '' : 'invisible'}>
+  <s class="strike"> <span> {title}</span></s>
 </div>
 </div>
 <style>
