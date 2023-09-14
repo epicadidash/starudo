@@ -6,8 +6,11 @@
   user-select: none;
 }
 .span{
-  font-weight: bolder;
+  font-weight: 550;
   user-select: none;
+}
+.red{
+  color: rgb(250, 74, 74);
 }
   .todocontainer {
   width: 70vw;

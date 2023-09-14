@@ -1,14 +1,17 @@
 <script lang="ts">
+  import currentDateTime from "../../store/currenttime";
 export let id:number;
 export let title:string;
 export let originalstatus:string = "not completed ";
-export let expecteddate:Date;
-let currentdate:Date= new Date();
-let currentYear = currentdate.getFullYear();
- let currentMonth = currentdate.getMonth() + 1;
-let  currentDay = currentdate.getDate();
+export let edate:string;
+let expecteddate:Date=new Date(edate);
+let redstatus = false
+if ($currentDateTime > expecteddate) {
+    redstatus = true
+}
 let strike = false
 $: currentstatus = originalstatus
+
 function oncompletion(event:Event){
   event.stopPropagation();
   strike = !strike;
@@ -26,7 +29,7 @@ function oncompletion(event:Event){
     <input type="checkbox" id={id?.toString()} />
     <label on:click|capture={oncompletion } for={id?.toString()}></label>
   </div>
-<span class="span {strike ? 'invisible' : ''}">{title}</span>
+<span class="span  {strike ? 'invisible' : ''} {redstatus ? 'red' : ''}">{title}</span>
 <div class={strike ? '' : 'invisible'}>
   <s class="strike"> <span> {title}</span></s>
 </div>
